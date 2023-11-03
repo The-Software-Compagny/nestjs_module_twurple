@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@nestjs/common": "^10.2.7",
-    "@nestjs/core": "^10.2.7",
+    "@nestjs/core": "^10.2.8",
     "@twurple/api": "^7.0.4",
     "@twurple/chat": "^7.0.4",
     "@twurple/pubsub": "^7.0.4",
