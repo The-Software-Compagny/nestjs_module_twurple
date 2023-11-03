@@ -1,10 +1,11 @@
 {
   "name": "@streamkits/nestjs_module_twurple",
-  "version": "0.0.1",
-  "description": "Twurple Nest.JS module",
+  "version": "0.0.2",
+  "description": "Twurple NestJS module",
   "repository": "https://github.com/@streamkits/nestjs_module_twurple.git",
   "author": "Tacx <12997062+tacxou@users.noreply.github.com>",
   "license": "BSD-3-Clause",
+  "main": "dist/index.js",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc",
