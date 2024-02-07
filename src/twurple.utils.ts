@@ -1,5 +1,7 @@
 import {
-  TWURPLE_MODULE_CONNECTION, TWURPLE_MODULE_CONNECTION_CHAT_TOKEN,
+  TWURPLE_MODULE_CONNECTION, 
+  TWURPLE_MODULE_CONNECTION_CHAT_TOKEN,
+  TWURPLE_MODULE_CONNECTION_PUBSUB_TOKEN,
   TWURPLE_MODULE_CONNECTION_API_TOKEN,
   TWURPLE_MODULE_OPTIONS_TOKEN,
 } from './twurple.constants'
@@ -19,7 +21,7 @@ export function getTwurpleConnectionChatToken(connection: string): string {
 }
 
 export function getTwurpleConnectionPubsubToken(connection: string): string {
-  return `${connection || TWURPLE_MODULE_CONNECTION}_${TWURPLE_MODULE_CONNECTION_CHAT_TOKEN}`
+  return `${connection || TWURPLE_MODULE_CONNECTION}_${TWURPLE_MODULE_CONNECTION_PUBSUB_TOKEN}`
 }
 
 export async function createTwurpleApiConnection(options: TwurpleModuleOptions) {
