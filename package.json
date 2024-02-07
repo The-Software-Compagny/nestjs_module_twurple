@@ -1,6 +1,6 @@
 {
   "name": "@streamkits/nestjs_module_twurple",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Twurple NestJS module",
   "repository": "https://github.com/@streamkits/nestjs_module_twurple.git",
   "author": "Tacx <12997062+tacxou@users.noreply.github.com>",
