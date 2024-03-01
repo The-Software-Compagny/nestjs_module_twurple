@@ -1,5 +1,5 @@
 import {
-  TWURPLE_MODULE_CONNECTION, 
+  TWURPLE_MODULE_CONNECTION,
   TWURPLE_MODULE_CONNECTION_CHAT_TOKEN,
   TWURPLE_MODULE_CONNECTION_PUBSUB_TOKEN,
   TWURPLE_MODULE_CONNECTION_API_TOKEN,
@@ -25,8 +25,9 @@ export function getTwurpleConnectionPubsubToken(connection: string): string {
 }
 
 export async function createTwurpleApiConnection(options: TwurpleModuleOptions) {
+  if (!options?.features?.api) return null
   const { config } = options
-  Logger.verbose('createTwurpleApiConnection', 'TwurpleModule')
+  Logger.verbose('Initialize TwurpleApi connection singletion...', 'TwurpleModule')
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   const { ApiClient } = await import('@twurple/api')
@@ -34,8 +35,9 @@ export async function createTwurpleApiConnection(options: TwurpleModuleOptions) 
 }
 
 export async function createTwurpleChatConnection(options: TwurpleModuleOptions) {
+  if (!options?.features?.chat) return null
   const { config } = options
-  Logger.verbose('createTwurpleChatConnection', 'TwurpleModule')
+  Logger.verbose('Initialize TwurpleChat connection singletion...', 'TwurpleModule')
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   const { ChatClient } = await import('@twurple/chat')
@@ -44,10 +46,15 @@ export async function createTwurpleChatConnection(options: TwurpleModuleOptions)
 
 
 export async function createTwurplePubsubConnection(options: TwurpleModuleOptions) {
+  if (!options?.features?.pubsub) return null
   const { config } = options
-  Logger.verbose('createTwurplePubsubConnection', 'TwurpleModule')
+  Logger.verbose('Initialize TwurplePubsub connection singletion...', 'TwurpleModule')
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   const { PubSubClient } = await import('@twurple/pubsub')
-  return new PubSubClient({ authProvider: config?.authProvider, ...config?.features?.pubsub })
+  try {
+    return new PubSubClient({ authProvider: config?.authProvider, ...config?.features?.pubsub })
+  } catch (e) {
+    console.error('e', e)
+  }
 }
