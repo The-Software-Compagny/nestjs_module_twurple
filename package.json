@@ -3,7 +3,18 @@
   "version": "1.0.0",
   "description": "Twitch API/Chat/PubSub with Twurple NestJS module",
   "repository": "https://github.com/The-Software-Compagny/nestjs_module_twurple.git",
-  "author": "Tacx <12997062+tacxou@users.noreply.github.com>",
+  "author": "tacxou <12997062+tacxou@users.noreply.github.com> (https://github.com/tacxou)",
+  "contributors": [
+    {
+      "name": " tacxou",
+      "email": "12997062+tacxou@users.noreply.github.com",
+      "url": "https://github.com/tacxou"
+    },
+    {
+      "name": "Contributors",
+      "url": "https://github.com/The-Software-Compagny/nestjs_module_twurple/graphs/contributors"
+    }
+  ],
   "license": "BSD-3-Clause",
   "main": "dist/index.js",
   "scripts": {
