@@ -1,6 +1,6 @@
 {
   "name": "@the-software-compagny/nestjs_module_twurple",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Twitch API/Chat/PubSub with Twurple NestJS module",
   "repository": "https://github.com/The-Software-Compagny/nestjs_module_twurple.git",
   "author": "Tacx <12997062+tacxou@users.noreply.github.com>",
